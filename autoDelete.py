@@ -28,4 +28,7 @@ def main():
     while True:
         time = input("please input time:")
         deleteDir(time)
+        os.system("ls")
+
+
 main()

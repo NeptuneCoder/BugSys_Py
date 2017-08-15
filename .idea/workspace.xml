@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df086481-bef5-4c17-85c2-811f3438c836" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autoDelete.py" afterPath="$PROJECT_DIR$/autoDelete.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +21,8 @@
       <file leaf-file-name="autoDelete.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/autoDelete.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+            <state relative-caret-position="450">
+              <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
               <folding>
                 <element signature="e#42#57#0" expanded="true" />
               </folding>
@@ -42,8 +43,8 @@
       <file leaf-file-name="bugManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bugManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="132" column="14" lean-forward="false" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="14" />
+            <state relative-caret-position="450">
+              <caret line="142" column="33" lean-forward="false" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -62,6 +63,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/bugManager.py" />
         <option value="$PROJECT_DIR$/autoDelete.py" />
       </list>
     </option>
@@ -512,16 +514,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bugManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="132" column="14" lean-forward="false" selection-start-line="132" selection-start-column="10" selection-end-line="132" selection-end-column="14" />
+        <state relative-caret-position="450">
+          <caret line="142" column="33" lean-forward="false" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autoDelete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        <state relative-caret-position="450">
+          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
           <folding>
             <element signature="e#42#57#0" expanded="true" />
           </folding>
