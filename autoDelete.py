@@ -25,7 +25,7 @@ def deleteDir(time):
 #deleteDir(generateTime())
 
 def main():
-    while true:
+    while True:
         time = input("please input time:")
         deleteDir(time)
 main()
