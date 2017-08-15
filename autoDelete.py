@@ -1,7 +1,8 @@
 #/usr/bin/python
 # _*_ coding: UTF-8 _*_
-import time
+
 import datetime
+
 import os
 
 def generateFileName(packagename,time):
@@ -22,4 +23,5 @@ def deleteDir(time):
         print(order)
 
 #deleteDir(generateTime())
-deleteDir("2017-8-8")
+time = input("please input time:")
+deleteDir(time)
