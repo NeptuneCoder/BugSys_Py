@@ -4,7 +4,6 @@
 # import os
 import pymysql
 
-
 def parseFile():
     try:
         path = "bugFlags.txt"
@@ -21,13 +20,17 @@ def updateBugInfo(bugFlag):
     db = pymysql.connect("localhost","root","root","bugDB")
     cursor = db.cursor()
     try:
-        effect_row = cursor.execute("update bugInfo set bug_status = 'fix' where bug_detail like   %s%", (bugFlag))
-        print(bugFlag+" row =  "+effect_row)
+        print(bugFlag)
+        bugFlag = str(bugFlag.strip('\n'))
+        sql ="update bugInfo set bug_status = 'fix' where bug_detail like '%%%s%%'"%(bugFlag)
+        print(sql)        
+        row =  cursor.execute(sql)
+        print("row = "+ row)
         db.commit()
-        print('insert successed')
+        print('update successed')
     except Exception as e:
         db.rollback()
-        print('insert failed',e)
+        print('update failed',e)
     db.close()
 
 parseFile()

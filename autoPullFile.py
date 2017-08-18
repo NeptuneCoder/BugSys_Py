@@ -38,7 +38,7 @@ def pullFile():
     for name in packages:
         print("name = %s"%name)
         #pullErrFile(generateTime(),name,generateFileName(name,generateTime()))
-        pullErrFile("2017-8-8",name,generateFileName(name,"2017-8-8"))
+        pullErrFile("2017-8-16",name,generateFileName(name,"2017-8-16"))
 
 pullFile()
 #autoPull(60)
