@@ -1,4 +1,5 @@
 /com.*
 /photo.*
-/.idea/
+/.idea/*
 /.idea/workspace.xml
+/.autoPullFile.py.swp
