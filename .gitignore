@@ -1,2 +1,4 @@
 /com.*
 /photo.*
+/.idea/
+/.idea/workspace.xml
