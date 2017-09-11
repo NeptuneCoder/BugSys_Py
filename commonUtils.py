@@ -5,7 +5,7 @@ import autoPullFile
 
 import deleteLocalFile
 import insertUtils
-from
+
 def main():
     while True:
         type = input("please input type:")
