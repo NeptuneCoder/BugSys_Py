@@ -3,7 +3,7 @@
 
 import pullFileUtils
 
-import deleteLocalFile
+# import deleteLocalFile
 import insertUtils
 
 def main():
@@ -43,7 +43,7 @@ def pullFile():
 def delete():
     print("current dates= %s" % pullFileUtils.generateTime())
     date = input("please input date:")
-    deleteLocalFile.deleteFile("",date)
+    # deleteLocalFile.deleteFile("",date)
     os.system("ls")
 
 def update():
