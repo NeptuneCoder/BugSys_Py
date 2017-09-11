@@ -123,8 +123,8 @@ def read_config(type,insert_time):
 def mysql_insert(insertTime):
     read_config("",insertTime)
 
-# def parseFile(insertTime,packageName):
-#     path = "/root/bugManageSystem/%s"%generateFileName(packageName,insertTime)
-#     parseFile(path,packageName,"",insertTime)
+def insert_to_db(insertTime,packageName):
+    path = "/root/bugManageSystem/%s"%generateFileName(packageName,insertTime)
+    parse_file(path,packageName,"",insertTime)
 
 

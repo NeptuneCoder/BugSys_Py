@@ -5,7 +5,7 @@ import autoPullFile
 
 import deleteLocalFile
 import insertUtils
-
+from
 def main():
     while True:
         type = input("please input type:")
@@ -48,7 +48,9 @@ def update():
 
 
 def insert():
-    insertUtils.parseFile("",Common.generateTime())
-    print("insert")
+    date = input("please insert date:")
+    packageName = input("please input packageName:")
+    insertUtils.insert_to_db(date,packageName)
+    print("insert date = %s   packageName = %s"%(date,packageName))
 
 main()
