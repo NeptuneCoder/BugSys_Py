@@ -4,7 +4,7 @@
 # import os
 import pymysql
 import time
-def parseFile():
+def read_config():
     try:
         path = "bugFlags.txt"
 
@@ -32,11 +32,4 @@ def updateBugInfo(bugFlag):
         print('update failed',e)
     db.close()
 
-def autoUpdate(n):
-    while True:
-        time.sleep(n)
-        currTime = time.strftime("%-H:%-M", time.localtime())
-        if currTime == "22:30":
-            parseFile()
 
-autoUpdate(60)

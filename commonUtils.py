@@ -19,6 +19,8 @@ def main():
             update()
         elif type == "insert":
             insert()
+        elif type == "insertAll":
+            insertAll()
         elif type == "exit":
             print("exit")
         else:
@@ -29,6 +31,7 @@ def help():
     print("delete:Manually delete automatic files\n")
     print("update: Update the automatic file to the database\n")
     print("insert:Put the specified file into the database\n")
+    print("insertAll:parse  the local all file to the database\n")
     print("exit:exit system\n")
 
 def pullFile():
@@ -52,5 +55,10 @@ def insert():
     packageName = input("please input packageName:")
     insertUtils.insert_to_db(date,packageName)
     print("insert date = %s   packageName = %s"%(date,packageName))
+
+def insertAll():
+    date = input("please insert date:")
+    insertUtils.mysql_insert(date)
+    print("insert date = %s"%(date))
 
 main()
