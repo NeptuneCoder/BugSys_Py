@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 import pullFileUtils
-
+import time
 
 def autoPull(n):
     while True:
