@@ -106,7 +106,7 @@ def generateTime():
     return last_date.strftime("%Y-%-m-%-d")
 
 
-def parseFile(type,insertTime):
+def parseLocalFile(type,insertTime):
     try:
         path = "appNames.txt"
         iter_f = iter(open(path))
@@ -121,7 +121,7 @@ def parseFile(type,insertTime):
         print("has an exception= %s"%e)
 
 def insert(insertTime):
-    parseFile("",insertTime)
+    parseLocalFile("",insertTime)
 
 # def parseFile(insertTime,packageName):
 #     path = "/root/bugManageSystem/%s"%generateFileName(packageName,insertTime)
