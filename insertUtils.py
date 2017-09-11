@@ -120,7 +120,7 @@ def read_config(type,insert_time):
     except Exception as e:
         print("has an exception= %s"%e)
 
-def insert(insertTime):
+def mysql_insert(insertTime):
     read_config("",insertTime)
 
 # def parseFile(insertTime,packageName):
