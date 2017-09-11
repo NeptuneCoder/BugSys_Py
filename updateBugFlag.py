@@ -3,7 +3,7 @@
 
 # import os
 import pymysql
-
+import time
 def parseFile():
     try:
         path = "bugFlags.txt"
@@ -22,10 +22,9 @@ def updateBugInfo(bugFlag):
     try:
         print(bugFlag)
         bugFlag = str(bugFlag.strip('\n'))
-        sql ="update bugInfo set bug_status = 'fix' where bug_detail like '%%%s%%'"%(bugFlag)
-        print(sql)        
+        sql ="update bugInfo set bug_status = 'fix' where bug_detail like '%%%s%%'"%bugFlag       
         row =  cursor.execute(sql)
-        print("row = "+ row)
+        print("row = "+ str(row))
         db.commit()
         print('update successed')
     except Exception as e:
@@ -33,4 +32,11 @@ def updateBugInfo(bugFlag):
         print('update failed',e)
     db.close()
 
-parseFile()
+def autoUpdate(n):
+    while True:
+        time.sleep(n)
+        currTime = time.strftime("%-H:%-M", time.localtime())
+        if currTime == "22:30":
+            parseFile()
+
+autoUpdate(60)

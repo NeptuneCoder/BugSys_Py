@@ -8,11 +8,9 @@ def autoPull(n):
         print("----------------------------------------")
         time.sleep(n)
         currTime = time.strftime("%-H:%-M", time.localtime())
-        if currTime == "8:21":
+        if currTime == "21:21":
             print("shijiandaole....")
-            pullFile()
-        else:
-            print("auto pull file ,current time = %s"%currTime)
+            parseFile()
         #getPackageName()
     
 
@@ -33,13 +31,29 @@ def generateTime():
     return last_date.strftime("%Y-%-m-%-d")
 #print(generateFileName("test"))
 
-def pullFile():
-    packages = set(['photo.studio.editor.selfie.camera','com.yiba.baidu.wifi','com.xvideostudio.videoeditorlite','com.necta.wifimousefree','com.infreewifi.cct','com.dianxinos.dxbs','com.yiba.sdk', 'com.yiba.sharewe.lite.activity', 'com.baidu.app', 'com.yiba.baidu.wifi'])
+def pullFile(day):
+    packages = set(['com.wifi.cool','photo.studio.editor.selfie.camera','com.yiba.baidu.wifi','com.xvideostudio.videoeditorlite','com.necta.wifimousefree','com.infreewifi.cct','com.dianxinos.dxbs','com.yiba.sdk', 'com.yiba.sharewe.lite.activity', 'com.baidu.app', 'com.yiba.baidu.wifi'])
     for name in packages:
         print("name = %s"%name)
-        #pullErrFile(generateTime(),name,generateFileName(name,generateTime()))
-        pullErrFile("2017-8-16",name,generateFileName(name,"2017-8-16"))
+        pullErrFile(generateTime(),name,generateFileName(name,generateTime()))
+        #pullErrFile(day,name,generateFileName(name,day))
 
-pullFile()
+
+def parseFile():
+    try:
+        path = "appNames.txt"
+
+        iter_f = iter(open(path))
+        for line in iter_f:
+            print("name = %s"%line)
+            name = line.strip('\n')
+            pullErrFile(generateTime(),name,generateFileName(name,generateTime()))
+            print(line)
+    except Exception as e:
+        print("has an exception= %s"%e)
+#day = input("please input day = ")
+#pullFile(day)
 #autoPull(60)
-print(generateTime())
+#print(generateTime())
+#parseFile()
+
