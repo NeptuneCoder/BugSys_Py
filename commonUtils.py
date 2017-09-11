@@ -4,6 +4,7 @@
 import autoPullFile
 
 import deleteLocalFile
+import insertUtils
 
 def main():
     while True:
@@ -47,6 +48,7 @@ def update():
 
 
 def insert():
+    insertUtils.parseFile("",Common.generateTime())
     print("insert")
 
 main()

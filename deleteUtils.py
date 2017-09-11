@@ -22,13 +22,10 @@ def deleteDir(time):
         os.system(order) 
         print(order)
 
-#deleteDir(generateTime())
-
 def main():
     while True:
         time = input("please input time:")
         deleteDir(time)
         os.system("ls")
-
 
 main()

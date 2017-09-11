@@ -3,7 +3,6 @@
 
 import os
 from random import Random
-import time
 import pymysql
 import datetime
 
@@ -66,8 +65,6 @@ def insertAll(id,user_county,phone_type,sdk_version,android_id,bug_type,bug_deta
         print(bug_detail)
     db.close()
 
-#insert('3','usa','hauwei','2.2.1','adbaec321ea32','outofmery','outofmery','23','fixed','remark','100230302','com.yh.xxx')
-
 
 def parseFile(path,package,type,time):
     try:
@@ -104,12 +101,6 @@ def parseFile(path,package,type,time):
         print("has an exception= %s"%e)
     
 
-#path = input("please input file path:")
-#package = input("please input app name:")
-#type = input("please input type:")
-#parseFile(path,package,type)
-
-
 
 def generateFileName(packagename,time):
     return "%s__%s"%(packagename,time)
@@ -117,28 +108,7 @@ def generateFileName(packagename,time):
 def generateTime():
     last_date = datetime.date.today()
     return last_date.strftime("%Y-%-m-%-d")
-#print(generateFileName("test"))
 
-def insertToMysql(type,insertTime):
-    packages = set(['com.wifi.cool','photo.studio.editor.selfie.camera','com.yiba.baidu.wifi','com.xvideostudio.videoeditorlite','com.necta.wifimousefree','com.infreewifi.cct','com.dianxinos.dxbs','com.yiba.sdk', 'com.yiba.sharewe.lite.activity', 'com.baidu.app', 'com.yiba.baidu.wifi'])
-    for name in packages:
-        print("name = %s"%name)
-        path = "/root/bugManageSystem/%s"%generateFileName(name,insertTime)
-        #path = "/root/bugManageSystem/%s"%generateFileName(name,insertTime)
-        parseFile(path,name,type,insertTime)
-
-#insertToMysql("")
-
-
-def autoInsert(n):
-    while True:
-        time.sleep(n)
-        currTime = time.strftime("%-H:%-M", time.localtime())
-        #if currTime == "22:00":
-        print ("shijiandaole....", generateTime())
-        parseFile("","2017-9-9")
-        #else:
-        print("test ...%s"%currTime)
 
 def parseFile(type,insertTime):
     try:
@@ -154,7 +124,6 @@ def parseFile(type,insertTime):
     except Exception as e:
         print("has an exception= %s"%e)
 
-autoInsert(60)
-#res = input("please input time:")
+def parseFile(insertTime):
+    parseFile("",insertTime)
 
-#insertToMysql("",res)
