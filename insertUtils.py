@@ -63,7 +63,7 @@ def insertAll(id,user_county,phone_type,sdk_version,android_id,bug_type,bug_deta
     db.close()
 
 
-def parseFile(path,package,type,time):
+def parse_file(path,package,type,time):
     try:
         files = os.listdir(path)
         count = 0
@@ -106,7 +106,7 @@ def generateTime():
     return last_date.strftime("%Y-%-m-%-d")
 
 
-def parseLocalFile(type,insertTime):
+def read_config(type,insert_time):
     try:
         path = "appNames.txt"
         iter_f = iter(open(path))
@@ -114,14 +114,14 @@ def parseLocalFile(type,insertTime):
         for line in iter_f:
             print("name = %s"%line)
             name = line.strip('\n')
-            path = "/root/bugManageSystem/%s"%generateFileName(name,insertTime)
-            parseFile(path,name,type,insertTime)
+            path = "/root/bugManageSystem/%s"%generateFileName(name,insert_time)
+            parse_file(path,name,type,insert_time)
             print(line)
     except Exception as e:
         print("has an exception= %s"%e)
 
 def insert(insertTime):
-    parseLocalFile("",insertTime)
+    read_config("",insertTime)
 
 # def parseFile(insertTime,packageName):
 #     path = "/root/bugManageSystem/%s"%generateFileName(packageName,insertTime)
