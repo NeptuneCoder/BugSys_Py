@@ -22,7 +22,7 @@ def random_str(randomlength=8):
     return str
 
 def deleteFile(path,packageName,time):
-    order = "rm -rf /root/bugManageSystem/%s"%,path,generateFileName(packageName,time)
+    order = "rm -rf %s%s"%(path,generateFileName(packageName,time))
     os.system(order)
 
 def generateTime():
