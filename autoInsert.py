@@ -6,6 +6,10 @@ import time
 import Common
 
 
+print("|--------------------------------------------------------|")
+print("|------------------------welcome-------------------------|")
+print("|--------------------------------------------------------|")
+
 def autoInsert(n):
     while True:
         time.sleep(n)
@@ -15,3 +19,5 @@ def autoInsert(n):
         insertUtils.parseFile("",Common.generateTime())
         #else:
         print("test ...%s"%currTime)
+
+autoInsert(60)

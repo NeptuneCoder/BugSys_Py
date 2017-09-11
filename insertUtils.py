@@ -6,9 +6,6 @@ from random import Random
 import pymysql
 import datetime
 
-print("|--------------------------------------------------------|")
-print("|------------------------welcome-------------------------|")
-print("|--------------------------------------------------------|")
 
 def random_str(randomlength=8):
     str = ''
@@ -71,7 +68,6 @@ def parseFile(path,package,type,time):
         files = os.listdir(path)
         count = 0
         print(type)
-        s = []
         for file in files:
             print('deal ....')
             strName = file+""
