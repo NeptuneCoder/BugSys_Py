@@ -3,16 +3,7 @@
 import time
 import datetime
 import os
-def autoPull(n):
-    while True:
-        print("----------------------------------------")
-        time.sleep(n)
-        currTime = time.strftime("%-H:%-M", time.localtime())
-        if currTime == "21:21":
-            print("shijiandaole....")
-            parseFile()
-        #getPackageName()
-    
+
 
 #timer(10)
 
@@ -21,7 +12,6 @@ def pullErrFile(time,packageName,fileName):
     print(line)
     os.system(line)
 
-#pullErrFile('2017-7-22')
 
 def generateFileName(packagename,time):
     return "%s__%s"%(packagename,time)
@@ -39,7 +29,7 @@ def pullFile(day):
         #pullErrFile(day,name,generateFileName(name,day))
 
 
-def parseFile():
+def read_config():
     try:
         path = "appNames.txt"
 
@@ -51,9 +41,4 @@ def parseFile():
             print(line)
     except Exception as e:
         print("has an exception= %s"%e)
-#day = input("please input day = ")
-#pullFile(day)
-#autoPull(60)
-#print(generateTime())
-#parseFile()
 

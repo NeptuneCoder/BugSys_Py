@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-import autoPullFile
+import pullFileUtils
 
 import deleteLocalFile
 import insertUtils
@@ -35,13 +35,13 @@ def help():
     print("exit:exit system\n")
 
 def pullFile():
-    print("current dates= %s"%autoPullFile.generateTime())
+    print("current dates= %s" % pullFileUtils.generateTime())
     day = input("please input day = ")
     package = input("please input package name =")
-    autoPullFile.pullErrFile(day,package,autoPullFile.generateFileName(package,day))
+    pullFileUtils.pullErrFile(day, package, pullFileUtils.generateFileName(package, day))
 
 def delete():
-    print("current dates= %s"%autoPullFile.generateTime())
+    print("current dates= %s" % pullFileUtils.generateTime())
     date = input("please input date:")
     deleteLocalFile.deleteFile("",date)
     os.system("ls")
