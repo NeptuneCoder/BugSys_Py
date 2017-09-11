@@ -56,4 +56,4 @@ def autoDelete(n):
             print ("shijiandaole....delete file ", genernateTime())
             deleteFile("",generateTime())
 
-autoDelete(60)
+# autoDelete(60)
