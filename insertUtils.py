@@ -120,6 +120,11 @@ def parseFile(type,insertTime):
     except Exception as e:
         print("has an exception= %s"%e)
 
-def parseFile(insertTime):
+def insert(insertTime):
     parseFile("",insertTime)
+
+# def parseFile(insertTime,packageName):
+#     path = "/root/bugManageSystem/%s"%generateFileName(packageName,insertTime)
+#     parseFile(path,packageName,"",insertTime)
+
 

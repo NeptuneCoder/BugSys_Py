@@ -16,8 +16,8 @@ def autoInsert(n):
         currTime = time.strftime("%-H:%-M", time.localtime())
         #if currTime == "22:00":
         print ("shijiandaole....", Common.generateTime())
-        insertUtils.parseFile("",Common.generateTime())
+        insertUtils.insert(Common.generateTime())
         #else:
         print("test ...%s"%currTime)
 
-autoInsert(60)
+autoInsert(10)
