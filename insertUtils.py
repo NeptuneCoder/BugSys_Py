@@ -81,7 +81,7 @@ def parse_file(path,package,type,time):
             bug_type = " "
             print("deal ....countryId = %s sdkVersion = %s phoneType = %s"%(countryId,sdkVersion,phoneType))
             if not os.path.isdir(file):
-                f = open(path+"/"+file);
+                f = open(path+"/"+file)
                 iter_f = iter(f);
                 bug_detail = " \n"
                 for line in iter_f:
