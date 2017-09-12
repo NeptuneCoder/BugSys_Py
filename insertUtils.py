@@ -69,7 +69,7 @@ def parse_file(path,package,type,time):
         count = 0
         print(type)
         for file in files:
-            print('deal ....')
+
             strName = file+""
             res = strName.split('_')
             countryId = res[0]
@@ -79,6 +79,7 @@ def parse_file(path,package,type,time):
             bugTime  = res[4].split('.')[0]
             count += 1
             bug_type = " "
+            print("deal ....countryId = %s sdkVersion = %s phoneType = %s"%(countryId,sdkVersion,phoneType))
             if not os.path.isdir(file):
                 f = open(path+"/"+file);
                 iter_f = iter(f);
