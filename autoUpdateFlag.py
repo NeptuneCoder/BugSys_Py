@@ -2,12 +2,12 @@
 # -*- coding: UTF-8 -*-
 
 import time
-import updateBugFlag
+import updateBugFlagUtils
 def autoUpdate(n):
     while True:
         time.sleep(n)
         currTime = time.strftime("%-H:%-M", time.localtime())
         if currTime == "22:30":
-            updateBugFlag.read_config()
+            updateBugFlagUtils.read_config()
 
 autoUpdate(60)

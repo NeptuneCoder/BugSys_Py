@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 import pullFileUtils
-
+import updateBugFlagUtils
 # import deleteLocalFile
 import insertUtils
 
@@ -47,6 +47,7 @@ def delete():
     os.system("ls")
 
 def update():
+    updateBugFlagUtils.read_config()
     print("update")
 
 
