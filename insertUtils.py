@@ -4,8 +4,7 @@
 import os
 from random import Random
 import pymysql
-import datetime
-
+import Common
 
 def random_str(randomlength=8):
     str = ''
@@ -99,12 +98,6 @@ def parse_file(path,package,type,time):
     
 
 
-def generateFileName(packagename,time):
-    return "%s__%s"%(packagename,time)
-
-def generateTime():
-    last_date = datetime.date.today()
-    return last_date.strftime("%Y-%-m-%-d")
 
 
 def read_config(type,insert_time):
@@ -115,7 +108,7 @@ def read_config(type,insert_time):
         for line in iter_f:
             print("name = %s"%line)
             name = line.strip('\n')
-            path = "/root/bugManageSystem/%s"%generateFileName(name,insert_time)
+            path = "/root/bugManageSystem/%s"%Common.generateFileName(name,insert_time)
             parse_file(path,name,type,insert_time)
             print(line)
     except Exception as e:
@@ -125,7 +118,7 @@ def mysql_insert(insertTime):
     read_config("",insertTime)
 
 def insert_to_db(insertTime,packageName):
-    path = "/root/bugManageSystem/%s"%generateFileName(packageName,insertTime)
+    path = "/root/bugManageSystem/%s"%Common.generateFileName(packageName,insertTime)
     parse_file(path,packageName,"",insertTime)
 
 

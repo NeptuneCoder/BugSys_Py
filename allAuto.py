@@ -3,7 +3,7 @@
 
 import time
 import Common
-import pullFileUtils,updateBugFlagUtils,insertUtils
+import pullFileUtils,updateBugFlagUtils,insertUtils,deleteUtils
 
 print("|--------------------------------------------------------|")
 print("|------------------------welcome-------------------------|")
@@ -26,7 +26,8 @@ def autoInsert(n):
             print("update ... ")
 
         elif currTime == "23:50":
-            print("22:30")
+            deleteUtils.deleteDir(Common.generateTime())
+
         else:
             print("test ...%s"%currTime)
 
